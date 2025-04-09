@@ -20,3 +20,8 @@ router.get("/", (req, res, next) => {
   if (req.query.postId) {
     results = results.filter(c => c.postId == req.query.postId);
   }
+
+    // Return filtered results
+    res.json(results);
+});
+
