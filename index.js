@@ -248,6 +248,9 @@ app.listen(port, () => {
   console.log(`- GET /api`);
   console.log(`- GET /api/users`);
   console.log(`- GET /api/posts`);
+  //addign comments here
+  console.log(`- GET /api/comments`); //comments endpoint
+
 });
 
 // Part 1: Exploring Existing Routes
