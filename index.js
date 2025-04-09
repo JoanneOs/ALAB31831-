@@ -255,3 +255,8 @@ app.listen(port, () => {
 // GET http://localhost:3000/api/posts/1
 // PATCH http://localhost:3000/api/posts/1 (with JSON body)
 // DELETE http://localhost:3000/api/posts/1
+
+
+// Part 2: Adding Additional Routes
+// Create data/comments.js:
+
