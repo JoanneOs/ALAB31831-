@@ -2,6 +2,10 @@ const express = require("express");
 const router = express.Router();
 
 const users = require("../data/users");
+
+const posts = require("../data/posts"); // Need posts for user's posts endpoint
+const comments = require("../data/comments"); // Need comments for user's comments endpoint
+
 const error = require("../utilities/error");
 
 router
@@ -13,6 +17,16 @@ router
         rel: ":id",
         type: "GET",
       },
+      {
+        href: "users/:id/posts",
+        rel: "user_posts",
+        type: "GET",
+      },
+      {
+        href: "users/:id/comments",
+        rel: "user_comments",
+        type: "GET",
+      }
     ];
 
     res.json({ users, links });
