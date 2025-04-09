@@ -173,6 +173,8 @@ ${time.toLocaleTimeString()}: Received ${req.method} request to ${req.url}`);
 // Routes (no API key protection)
 app.use("/api/users", users);
 app.use("/api/posts", posts);
+//adding comments 
+app.use("/api/comments", comments); 
 
 // HATEOAS Links
 app.get("/", (req, res) => {
@@ -208,6 +210,16 @@ app.get("/api", (req, res) => {
       {
         href: "api/posts",
         rel: "posts",
+        type: "POST",
+      },
+      {
+        href: "api/comments", // NEW
+        rel: "comments",
+        type: "GET",
+      },
+      {
+        href: "api/comments", // NEW
+        rel: "comments",
         type: "POST",
       },
     ],
