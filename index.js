@@ -14,7 +14,12 @@
 // nodemon index.js
 
 
-//
+//These can be tested directly in your browser:
+
+// http://localhost:3000/api/users
+// http://localhost:3000/api/users/1
+// http://localhost:3000/api/posts
+// http://localhost:3000/api/posts?userId=1
 
 
 // const express = require("express");
@@ -229,3 +234,24 @@ app.listen(port, () => {
   console.log(`- GET /api/users`);
   console.log(`- GET /api/posts`);
 });
+
+// Part 1: Exploring Existing Routes
+// Basic Checks:
+
+// GET http://localhost:3000/
+// GET http://localhost:3000/api
+// User Routes:
+
+// GET http://localhost:3000/api/users
+// POST http://localhost:3000/api/users (with JSON body)
+// GET http://localhost:3000/api/users/1
+// PATCH http://localhost:3000/api/users/1 (with JSON body)
+// DELETE http://localhost:3000/api/users/1
+// Post Routes:
+
+// GET http://localhost:3000/api/posts
+// GET http://localhost:3000/api/posts?userId=1
+// POST http://localhost:3000/api/posts (with JSON body)
+// GET http://localhost:3000/api/posts/1
+// PATCH http://localhost:3000/api/posts/1 (with JSON body)
+// DELETE http://localhost:3000/api/posts/1
