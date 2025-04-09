@@ -146,6 +146,9 @@ const bodyParser = require("body-parser");
 
 const users = require("./routes/users");
 const posts = require("./routes/posts");
+//adding comments rout here
+const comments = require("./routes/comments"); // NEW
+
 const error = require("./utilities/error");
 
 const app = express();
@@ -260,3 +263,25 @@ app.listen(port, () => {
 // Part 2: Adding Additional Routes
 // Create data/comments.js:
 //then routes/comments.js:
+
+
+// Testing the New Endpoints:
+
+// User Posts:
+// bash
+// Copy
+// curl http://localhost:3000/api/users/1/posts
+// User Comments:
+// bash
+// Copy
+// curl http://localhost:3000/api/users/1/comments
+// curl http://localhost:3000/api/users/1/comments?postId=1
+// Post Comments:
+// bash
+// Copy
+// curl http://localhost:3000/api/posts/1/comments
+// curl http://localhost:3000/api/posts/1/comments?userId=1
+// Filtered Posts:
+// bash
+// Copy
+// curl http://localhost:3000/api/posts?userId=1
