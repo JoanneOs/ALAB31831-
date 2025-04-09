@@ -4,7 +4,9 @@ const router = express.Router();
 const error = require("../utilities/error");
 
 // Import our fake "database"
-let comments = require("../data/comments");
+const comments = require("../data/comments");
+const users = require("../data/users");
+const posts = require("../data/posts");
 
 //get all comments :
 router.get("/", (req, res, next) => {
